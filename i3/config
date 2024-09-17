@@ -89,6 +89,17 @@ bindsym $mod+Print exec flameshot gui
 # kill focused window
 bindsym $mod+Shift+q kill
 
+#brightnessctl
+bindsym $mod+F6 exec "brightnessctl s +50"
+bindsym $mod+F5 exec "brightnessctl s 50-"
+
+#change monitor layout
+#solo monitor exterior HDMI
+bindsym $mod+ctrl+F9 exec "xrandr --output eDP-1 --off --output DP-1 --off --output HDMI-1 --off --output DP-2 --off --output HDMI-2 --primary --mode 1920x1080 --pos 0x0 --rotate normal"
+
+#solo display laptop eDP1
+bindsym $mod+ctrl+F10 exec "xrandr --output eDP-1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output DP-1 --off --output HDMI-1 --off --output DP-2 --off --output HDMI-2 --off"
+
 # start dmenu (a program launcher)
 #bindsym $mod+p exec --no-startup-id dmenu_run
 
